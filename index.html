@@ -3,204 +3,261 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Recipe Book 🍳</title>
+  <title>My Recipe Book</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="recipe-style.css" />
 </head>
 <body>
 
+  <!-- BOTANICAL CORNERS -->
+  <div class="botanical-frame" aria-hidden="true">
+    <svg class="corner corner-tl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 200 C22 160 18 120 25 85 C30 55 20 25 20 5" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M20 5 C55 8 100 5 150 7 C170 8 190 6 200 6" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M22 140 C5 128 2 108 8 95" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M23 95 C45 84 62 78 65 62" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M22 50 C8 42 2 28 6 16" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M80 6 C78 22 82 38 72 50" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M145 7 C142 24 148 38 138 52" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <ellipse cx="6" cy="100" rx="13" ry="6" transform="rotate(-25 6 100)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="52" cy="82" rx="14" ry="6" transform="rotate(18 52 82)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="62" cy="58" rx="12" ry="5" transform="rotate(22 62 58)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="4" cy="22" rx="11" ry="5" transform="rotate(-30 4 22)" fill="#7d9c80" opacity="0.6"/>
+      <ellipse cx="72" cy="46" rx="12" ry="5" transform="rotate(-18 72 46)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="68" cy="18" rx="11" ry="5" transform="rotate(10 68 18)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="130" cy="10" rx="13" ry="5" transform="rotate(-5 130 10)" fill="#7d9c80" opacity="0.65"/>
+      <ellipse cx="138" cy="48" rx="11" ry="5" transform="rotate(20 138 48)" fill="#6e9472" opacity="0.6"/>
+      <circle cx="8" cy="95" r="4" fill="#d4c4a0" opacity="0.85"/><circle cx="8" cy="95" r="2" fill="#ede0c4" opacity="0.95"/>
+      <circle cx="65" cy="60" r="4.5" fill="#b5c9a5" opacity="0.8"/><circle cx="65" cy="60" r="2" fill="#d8ead0" opacity="0.95"/>
+      <circle cx="6" cy="16" r="3.5" fill="#d4c4a0" opacity="0.85"/>
+      <circle cx="140" cy="50" r="4" fill="#b5c9a5" opacity="0.8"/><circle cx="140" cy="50" r="2" fill="#d8ead0" opacity="0.95"/>
+      <circle cx="18" cy="170" r="2.5" fill="#8aad8e" opacity="0.7"/><circle cx="14" cy="163" r="2" fill="#7d9c80" opacity="0.65"/>
+    </svg>
+    <svg class="corner corner-tr" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path d="M180 200 C178 160 182 120 175 85 C170 55 180 25 180 5" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M180 5 C145 8 100 5 50 7 C30 8 10 6 0 6" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M178 140 C195 128 198 108 192 95" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M177 95 C155 84 138 78 135 62" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M178 50 C192 42 198 28 194 16" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M120 6 C122 22 118 38 128 50" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M55 7 C58 24 52 38 62 52" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <ellipse cx="194" cy="100" rx="13" ry="6" transform="rotate(25 194 100)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="148" cy="82" rx="14" ry="6" transform="rotate(-18 148 82)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="138" cy="58" rx="12" ry="5" transform="rotate(-22 138 58)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="196" cy="22" rx="11" ry="5" transform="rotate(30 196 22)" fill="#7d9c80" opacity="0.6"/>
+      <ellipse cx="128" cy="46" rx="12" ry="5" transform="rotate(18 128 46)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="132" cy="18" rx="11" ry="5" transform="rotate(-10 132 18)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="70" cy="10" rx="13" ry="5" transform="rotate(5 70 10)" fill="#7d9c80" opacity="0.65"/>
+      <ellipse cx="62" cy="48" rx="11" ry="5" transform="rotate(-20 62 48)" fill="#6e9472" opacity="0.6"/>
+      <circle cx="192" cy="95" r="4" fill="#d4c4a0" opacity="0.85"/><circle cx="192" cy="95" r="2" fill="#ede0c4" opacity="0.95"/>
+      <circle cx="135" cy="60" r="4.5" fill="#b5c9a5" opacity="0.8"/><circle cx="135" cy="60" r="2" fill="#d8ead0" opacity="0.95"/>
+      <circle cx="194" cy="16" r="3.5" fill="#d4c4a0" opacity="0.85"/>
+      <circle cx="60" cy="50" r="4" fill="#b5c9a5" opacity="0.8"/><circle cx="60" cy="50" r="2" fill="#d8ead0" opacity="0.95"/>
+      <circle cx="182" cy="170" r="2.5" fill="#8aad8e" opacity="0.7"/><circle cx="186" cy="163" r="2" fill="#7d9c80" opacity="0.65"/>
+    </svg>
+    <svg class="corner corner-bl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 0 C22 40 18 80 25 115 C30 145 20 175 20 195" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M20 195 C55 192 100 195 150 193 C170 192 190 194 200 194" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M22 60 C5 72 2 92 8 105" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M23 105 C45 116 62 122 65 138" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M22 150 C8 158 2 172 6 184" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M80 194 C78 178 82 162 72 150" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M145 193 C142 176 148 162 138 148" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <ellipse cx="6" cy="100" rx="13" ry="6" transform="rotate(25 6 100)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="52" cy="118" rx="14" ry="6" transform="rotate(-18 52 118)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="62" cy="142" rx="12" ry="5" transform="rotate(-22 62 142)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="4" cy="178" rx="11" ry="5" transform="rotate(30 4 178)" fill="#7d9c80" opacity="0.6"/>
+      <ellipse cx="72" cy="154" rx="12" ry="5" transform="rotate(18 72 154)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="68" cy="182" rx="11" ry="5" transform="rotate(-10 68 182)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="130" cy="190" rx="13" ry="5" transform="rotate(5 130 190)" fill="#7d9c80" opacity="0.65"/>
+      <ellipse cx="138" cy="152" rx="11" ry="5" transform="rotate(-20 138 152)" fill="#6e9472" opacity="0.6"/>
+      <circle cx="8" cy="105" r="4" fill="#d4c4a0" opacity="0.85"/><circle cx="8" cy="105" r="2" fill="#ede0c4" opacity="0.95"/>
+      <circle cx="65" cy="140" r="4.5" fill="#b5c9a5" opacity="0.8"/><circle cx="65" cy="140" r="2" fill="#d8ead0" opacity="0.95"/>
+      <circle cx="6" cy="184" r="3.5" fill="#d4c4a0" opacity="0.85"/>
+      <circle cx="140" cy="150" r="4" fill="#b5c9a5" opacity="0.8"/><circle cx="140" cy="150" r="2" fill="#d8ead0" opacity="0.95"/>
+    </svg>
+    <svg class="corner corner-br" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path d="M180 0 C178 40 182 80 175 115 C170 145 180 175 180 195" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M180 195 C145 192 100 195 50 193 C30 192 10 194 0 194" stroke="#7d9c80" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M178 60 C195 72 198 92 192 105" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M177 105 C155 116 138 122 135 138" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M178 150 C192 158 198 172 194 184" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M120 194 C122 178 118 162 128 150" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M55 193 C58 176 52 162 62 148" stroke="#7d9c80" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <ellipse cx="194" cy="100" rx="13" ry="6" transform="rotate(-25 194 100)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="148" cy="118" rx="14" ry="6" transform="rotate(18 148 118)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="138" cy="142" rx="12" ry="5" transform="rotate(22 138 142)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="196" cy="178" rx="11" ry="5" transform="rotate(-30 196 178)" fill="#7d9c80" opacity="0.6"/>
+      <ellipse cx="128" cy="154" rx="12" ry="5" transform="rotate(-18 128 154)" fill="#6e9472" opacity="0.65"/>
+      <ellipse cx="132" cy="182" rx="11" ry="5" transform="rotate(10 132 182)" fill="#8aad8e" opacity="0.7"/>
+      <ellipse cx="70" cy="190" rx="13" ry="5" transform="rotate(-5 70 190)" fill="#7d9c80" opacity="0.65"/>
+      <ellipse cx="62" cy="152" rx="11" ry="5" transform="rotate(20 62 152)" fill="#6e9472" opacity="0.6"/>
+      <circle cx="192" cy="105" r="4" fill="#d4c4a0" opacity="0.85"/><circle cx="192" cy="105" r="2" fill="#ede0c4" opacity="0.95"/>
+      <circle cx="135" cy="140" r="4.5" fill="#b5c9a5" opacity="0.8"/><circle cx="135" cy="140" r="2" fill="#d8ead0" opacity="0.95"/>
+      <circle cx="194" cy="184" r="3.5" fill="#d4c4a0" opacity="0.85"/>
+      <circle cx="60" cy="150" r="4" fill="#b5c9a5" opacity="0.8"/><circle cx="60" cy="150" r="2" fill="#d8ead0" opacity="0.95"/>
+    </svg>
+  </div>
+
   <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
-      <div class="logo">
-        <span class="logo-emoji">🍳</span>
-        <span class="logo-text">My Recipe Book</span>
-      </div>
+      <div class="logo">My Recipe Book</div>
       <div class="header-actions">
-        <button class="btn-shopping" onclick="openShopping()">🛒 Shopping List <span id="shopping-count" class="badge" style="display:none">0</span></button>
-        <button class="btn-add" onclick="openAddModal()">+ Add Recipe</button>
+        <button class="btn-shopping" onclick="openShopping()">Shopping List <span id="shopping-count" class="badge" style="display:none">0</span></button>
+        <button class="btn-add" onclick="openAddModal()">+ New Recipe</button>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- SEARCH & FILTERS -->
   <section class="hero">
     <div class="hero-inner">
       <div class="search-bar-wrap">
-        <span class="search-icon">🔍</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.5;flex-shrink:0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         <input type="text" id="search-input" placeholder="Search recipes or ingredients..." oninput="filterRecipes()" />
       </div>
       <div class="filters">
-        <button class="filter-pill active" data-filter="all" onclick="setFilter(this, 'all')">All</button>
-        <button class="filter-pill" data-filter="breakfast" onclick="setFilter(this, 'breakfast')">🌅 Breakfast</button>
-        <button class="filter-pill" data-filter="lunch" onclick="setFilter(this, 'lunch')">☀️ Lunch</button>
-        <button class="filter-pill" data-filter="dinner" onclick="setFilter(this, 'dinner')">🌙 Dinner</button>
-        <button class="filter-pill" data-filter="snack" onclick="setFilter(this, 'snack')">🍿 Snack</button>
-        <button class="filter-pill" data-filter="dessert" onclick="setFilter(this, 'dessert')">🍰 Dessert</button>
-        <button class="filter-pill" data-filter="favourite" onclick="setFilter(this, 'favourite')">❤️ Favourites</button>
+        <button class="filter-pill active" data-filter="all" onclick="setFilter(this,'all')">All</button>
+        <button class="filter-pill" data-filter="breakfast" onclick="setFilter(this,'breakfast')">Breakfast</button>
+        <button class="filter-pill" data-filter="lunch" onclick="setFilter(this,'lunch')">Lunch</button>
+        <button class="filter-pill" data-filter="dinner" onclick="setFilter(this,'dinner')">Dinner</button>
+        <button class="filter-pill" data-filter="snack" onclick="setFilter(this,'snack')">Snack</button>
+        <button class="filter-pill" data-filter="dessert" onclick="setFilter(this,'dessert')">Dessert</button>
+        <button class="filter-pill" data-filter="favourite" onclick="setFilter(this,'favourite')">Favourites</button>
       </div>
     </div>
   </section>
 
   <!-- RECIPE GRID -->
   <main class="main">
-    <div class="stats-bar">
-      <span id="recipe-count">0 recipes</span>
-    </div>
+    <div class="stats-bar"><span id="recipe-count"></span></div>
     <div class="recipe-grid" id="recipe-grid">
       <div class="empty-state" id="empty-state">
-        <div class="empty-emoji">👨‍🍳</div>
-        <h2>No recipes yet!</h2>
-        <p>Click "Add Recipe" to get cooking</p>
-        <button class="btn-add" onclick="openAddModal()">+ Add Your First Recipe</button>
+        <div class="empty-leaf">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9ab89e" stroke-width="1"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c4.5 0 8.5-2.5 9.5-7-1.5 1-3 1.5-4.5 1.5C13 16.5 9 12.5 9 8c0-1.5.5-3 1.5-4.5C9 4 12 2 12 2z"/></svg>
+        </div>
+        <h2>No recipes yet</h2>
+        <p>Begin your collection by adding your first recipe</p>
+        <button class="btn-add" onclick="openAddModal()">Add Your First Recipe</button>
       </div>
     </div>
   </main>
 
-  <!-- ADD/EDIT RECIPE MODAL -->
-  <div class="modal-overlay" id="add-modal" onclick="closeModalOutside(event, 'add-modal')">
+  <!-- ADD / EDIT MODAL -->
+  <div class="modal-overlay" id="add-modal" onclick="closeModalOutside(event,'add-modal')">
     <div class="modal">
       <div class="modal-header">
-        <h2 id="modal-title">✨ New Recipe</h2>
-        <button class="modal-close" onclick="closeModal('add-modal')">✕</button>
+        <h2 id="modal-title">New Recipe</h2>
+        <button class="modal-close" onclick="closeModal('add-modal')">&#10005;</button>
       </div>
       <div class="modal-body">
         <div class="form-row">
           <div class="form-group">
-            <label>Recipe Name *</label>
+            <label>Recipe Name</label>
             <input type="text" id="f-name" placeholder="e.g. Grandma's Pasta" />
           </div>
           <div class="form-group form-group-sm">
             <label>Category</label>
             <select id="f-category">
-              <option value="breakfast">🌅 Breakfast</option>
-              <option value="lunch">☀️ Lunch</option>
-              <option value="dinner" selected>🌙 Dinner</option>
-              <option value="snack">🍿 Snack</option>
-              <option value="dessert">🍰 Dessert</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner" selected>Dinner</option>
+              <option value="snack">Snack</option>
+              <option value="dessert">Dessert</option>
             </select>
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group form-group-sm">
-            <label>⏱ Prep Time</label>
-            <input type="text" id="f-prep" placeholder="e.g. 15 mins" />
-          </div>
-          <div class="form-group form-group-sm">
-            <label>🔥 Cook Time</label>
-            <input type="text" id="f-cook" placeholder="e.g. 30 mins" />
-          </div>
-          <div class="form-group form-group-sm">
-            <label>🍽 Servings</label>
-            <input type="number" id="f-servings" value="4" min="1" max="100" />
-          </div>
+          <div class="form-group form-group-sm"><label>Prep Time</label><input type="text" id="f-prep" placeholder="15 mins"/></div>
+          <div class="form-group form-group-sm"><label>Cook Time</label><input type="text" id="f-cook" placeholder="30 mins"/></div>
+          <div class="form-group form-group-sm"><label>Servings</label><input type="number" id="f-servings" value="4" min="1" max="100"/></div>
         </div>
-        <div class="form-group">
-          <label>📝 Description</label>
-          <input type="text" id="f-desc" placeholder="A short description of the dish..." />
-        </div>
-        <div class="form-group">
-          <label>🥕 Ingredients <span class="label-hint">(one per line)</span></label>
-          <textarea id="f-ingredients" rows="6" placeholder="2 cups flour&#10;1 tsp salt&#10;3 eggs&#10;..."></textarea>
-        </div>
-        <div class="form-group">
-          <label>👨‍🍳 Steps <span class="label-hint">(one per line)</span></label>
-          <textarea id="f-steps" rows="7" placeholder="Preheat oven to 180°C&#10;Mix dry ingredients&#10;Add eggs and milk&#10;..."></textarea>
-        </div>
-        <div class="form-group">
-          <label>🏷 Tags <span class="label-hint">(comma separated)</span></label>
-          <input type="text" id="f-tags" placeholder="e.g. quick, vegetarian, spicy" />
-        </div>
-        <div class="form-group">
-          <label>🖼 Emoji Icon</label>
-          <input type="text" id="f-emoji" placeholder="🍝" maxlength="4" />
-        </div>
+        <div class="form-group"><label>Description</label><input type="text" id="f-desc" placeholder="A short description..."/></div>
+        <div class="form-group"><label>Ingredients <span class="label-hint">— one per line</span></label><textarea id="f-ingredients" rows="6" placeholder="2 cups flour&#10;1 tsp salt&#10;3 eggs"></textarea></div>
+        <div class="form-group"><label>Steps <span class="label-hint">— one per line</span></label><textarea id="f-steps" rows="7" placeholder="Preheat oven to 180°C&#10;Mix dry ingredients&#10;Add eggs and milk"></textarea></div>
+        <div class="form-group"><label>Tags <span class="label-hint">— comma separated</span></label><input type="text" id="f-tags" placeholder="quick, vegetarian, comfort food"/></div>
       </div>
       <div class="modal-footer">
-        <button class="btn-cancel" onclick="closeModal('add-modal')">Cancel</button>
-        <button class="btn-save" onclick="saveRecipe()">Save Recipe 🎉</button>
+        <button class="btn-ghost" onclick="closeModal('add-modal')">Cancel</button>
+        <button class="btn-primary" onclick="saveRecipe()">Save Recipe</button>
       </div>
     </div>
   </div>
 
-  <!-- VIEW RECIPE MODAL -->
-  <div class="modal-overlay" id="view-modal" onclick="closeModalOutside(event, 'view-modal')">
+  <!-- VIEW MODAL -->
+  <div class="modal-overlay" id="view-modal" onclick="closeModalOutside(event,'view-modal')">
     <div class="modal modal-wide">
       <div class="modal-header">
         <div class="view-title-row">
-          <span id="view-emoji" style="font-size:2rem">🍝</span>
-          <div>
-            <h2 id="view-name">Recipe Name</h2>
-            <div id="view-category-badge" class="category-badge"></div>
-          </div>
+          <h2 id="view-name">Recipe</h2>
+          <span id="view-category-badge" class="category-badge"></span>
         </div>
         <div class="view-header-actions">
-          <button class="btn-fav" id="fav-btn" onclick="toggleFavourite()">🤍</button>
-          <button class="btn-edit" onclick="editCurrentRecipe()">✏️ Edit</button>
-          <button class="modal-close" onclick="closeModal('view-modal')">✕</button>
+          <button class="btn-fav" id="fav-btn" onclick="toggleFavourite()">&#9825;</button>
+          <button class="btn-edit-sm" onclick="editCurrentRecipe()">Edit</button>
+          <button class="modal-close" onclick="closeModal('view-modal')">&#10005;</button>
         </div>
       </div>
       <div class="modal-body">
         <div class="view-meta">
-          <span id="view-prep">⏱ —</span>
-          <span id="view-cook">🔥 —</span>
+          <span id="view-prep"></span>
+          <span id="view-cook"></span>
           <div class="servings-control">
-            <span>🍽</span>
-            <button onclick="changeServings(-1)">−</button>
+            <button onclick="changeServings(-1)">&#8722;</button>
             <span id="view-servings">4</span>
             <button onclick="changeServings(1)">+</button>
             <span>servings</span>
           </div>
         </div>
         <p id="view-desc" class="view-desc"></p>
-
         <div class="view-cols">
           <div class="view-col">
             <div class="col-header">
-              <h3>🥕 Ingredients</h3>
-              <button class="btn-add-shopping" onclick="addAllToShopping()">+ Add all to shopping list</button>
+              <h3>Ingredients</h3>
+              <button class="btn-to-shopping" onclick="addAllToShopping()">+ Add to shopping list</button>
             </div>
             <ul id="view-ingredients" class="check-list"></ul>
           </div>
           <div class="view-col">
-            <h3>👨‍🍳 Steps</h3>
+            <h3>Method</h3>
             <ol id="view-steps" class="check-list steps-list"></ol>
           </div>
         </div>
-
         <div id="view-tags" class="view-tags"></div>
       </div>
       <div class="modal-footer">
-        <button class="btn-danger" onclick="deleteCurrentRecipe()">🗑 Delete</button>
-        <button class="btn-save" onclick="closeModal('view-modal')">Done</button>
+        <button class="btn-danger" onclick="deleteCurrentRecipe()">Delete Recipe</button>
+        <button class="btn-primary" onclick="closeModal('view-modal')">Done</button>
       </div>
     </div>
   </div>
 
-  <!-- SHOPPING LIST MODAL -->
-  <div class="modal-overlay" id="shopping-modal" onclick="closeModalOutside(event, 'shopping-modal')">
+  <!-- SHOPPING MODAL -->
+  <div class="modal-overlay" id="shopping-modal" onclick="closeModalOutside(event,'shopping-modal')">
     <div class="modal">
       <div class="modal-header">
-        <h2>🛒 Shopping List</h2>
-        <button class="modal-close" onclick="closeModal('shopping-modal')">✕</button>
+        <h2>Shopping List</h2>
+        <button class="modal-close" onclick="closeModal('shopping-modal')">&#10005;</button>
       </div>
       <div class="modal-body">
         <div class="shopping-add-row">
-          <input type="text" id="shopping-input" placeholder="Add an item..." onkeydown="shoppingKeydown(event)" />
-          <button class="btn-save" onclick="addShoppingItem()">Add</button>
+          <input type="text" id="shopping-input" placeholder="Add an item..." onkeydown="shoppingKeydown(event)"/>
+          <button class="btn-primary" onclick="addShoppingItem()">Add</button>
         </div>
         <ul id="shopping-list" class="shopping-list"></ul>
-        <div id="shopping-empty" class="shopping-empty">No items yet! Add some or open a recipe and click "Add all to shopping list".</div>
+        <p id="shopping-empty" class="shopping-empty">Your list is empty. Open a recipe and add all ingredients at once.</p>
       </div>
       <div class="modal-footer">
         <button class="btn-danger" onclick="clearShopping()">Clear all</button>
-        <button class="btn-save" onclick="closeModal('shopping-modal')">Done</button>
+        <button class="btn-primary" onclick="closeModal('shopping-modal')">Done</button>
       </div>
     </div>
   </div>
 
+  <div class="toast" id="toast"></div>
   <script src="recipe-app.js"></script>
 </body>
 </html>
